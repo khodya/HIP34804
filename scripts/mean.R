@@ -24,7 +24,7 @@ for (i in 1:num_plates) {
 }
 
 results <- c()
-for (i in 1:num_plates)
+for (i in 1:num_stars)
     results <- rbind(results, colMeans(get(stars[i])))
 
 results
