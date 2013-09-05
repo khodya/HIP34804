@@ -27,7 +27,7 @@ results <- c()
 for (i in 1:num_stars)
     results <- rbind(results, colMeans(get(stars[i])))
 
-results
+write.table(results, file="stars", row.names=FALSE, col.names=FALSE)
 
 
 
