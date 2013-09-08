@@ -18,6 +18,7 @@ def <- pseudoinverse(m) %*% base_plate[,2]
 res <- cbind(
 	rbind(abc, def),
 	c(1,0,0,0,1,0) - rbind(abc, def)
+	#c(1,0,mean(base_plate[,1]-plate[,1]),0,1,mean(base_plate[,2]-plate[,2])) - rbind(abc, def)
 )
 
 write.table(res, file="parameters", row.names=FALSE, col.names=FALSE)
