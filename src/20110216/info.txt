@@ -1,0 +1,8 @@
+There were problems with measuring stars on picture "g074a006.fit":
+Star 7 was not measured from the first.
+
+There were problems with measuring stars on picture "g074a007.fit":
+Stars 7, 14 were not measured from the first.
+
+There were problems with measuring stars on picture "g074a007.fit":
+Star 7 was not measured from the first.
