@@ -41,8 +41,8 @@ for (i in 1:num_stars) {
 }
 
 # misclosure O-C
-obs_stars <- read.table(paste0(star_path,"s"))
+obs_stars <- read.table(paste0(star_path,"s"), header=FALSE)
 miscl <- obs_stars[,1:2]-calc_stars[,1:2]
 
 write.table(c(x,y,err_x,err_y), file="star", row.names=FALSE, col.names=FALSE)
-write.table(miscl, file="misclosures", row.names=FALSE, col.names=FALSE)
+write.table(format(miscl, digits=1, nsmall=4), file="misclosures", row.names=FALSE, col.names=FALSE, quote=FALSE)
