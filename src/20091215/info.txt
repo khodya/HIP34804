@@ -1,0 +1,5 @@
+Plate g074a005.fit:
+Star 6 is hidden. Whole plate is hard to measure.
+
+Plate g074a008.fit:
+Whole plate is hard to measure.
