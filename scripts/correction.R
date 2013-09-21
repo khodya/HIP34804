@@ -1,4 +1,5 @@
 star_path <- "../20100101/star"
+ms_file <- "missed_stars"
 m <- read.table("parameters")
 
 # calculating target star
@@ -19,8 +20,8 @@ err_y <- sqrt(
 )
 
 # calculating reference stars
-num_stars <- 15
 stars <- read.table("stars")
+num_stars <- nrow(stars)
 calc_stars <- c()
 for (i in 1:num_stars) {
     a1 <- m[1,1] * stars[i,1] +
@@ -41,7 +42,13 @@ for (i in 1:num_stars) {
 }
 
 # misclosure O-C
-obs_stars <- read.table(paste0(star_path,"s"), header=FALSE)
+obs_stars_src <- readLines(paste0(star_path,"s"))
+
+if (file.exists(ms_file))
+	missed_stars <- read.table(ms_file)
+index <- setdiff(c(1:length(obs_stars_src)), missed_stars)
+
+obs_stars <- read.table(textConnection(obs_stars_src[index]))
 miscl <- obs_stars[,1:2]-calc_stars[,1:2]
 
 write.table(c(x,y,err_x,err_y), file="star", row.names=FALSE, col.names=FALSE)
