@@ -10,13 +10,17 @@ stars <- c("star_01", "star_02", "star_03", "star_04",
 	 "star_09", "star_10", "star_11", "star_12",
 	 "star_13", "star_14", "star_15")	     
 
-num_plates <- 8
-num_stars <- 15
+num_plates <- length(files)
 
-for (i in 1:num_stars)
-    assign(stars[i], c())
+plate <- read.table(files[1])
+num_stars <- nrow(plate)
 
-for (i in 1:num_plates) {
+for (j in 1:num_stars) {
+    assign(stars[j], c())
+    assign(stars[j], rbind(get(stars[j]), plate[j,10:13]))
+}
+
+for (i in 2:num_plates) {
     plate <- read.table(files[i])
     for (j in 1:num_stars) {
     	assign(stars[j], rbind(get(stars[j]), plate[j,10:13]))
