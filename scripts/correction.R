@@ -1,4 +1,4 @@
-star_path <- "../20100101/star"
+star_path <- "star"
 ms_file <- "missed_stars"
 m <- read.table("parameters")
 
@@ -51,5 +51,5 @@ obs_stars <- read.table(textConnection(obs_stars_src[index]))
 
 miscl <- obs_stars[,1:2]-calc_stars[,1:2]
 
-write.table(c(x,y,err_x,err_y), file="star", row.names=FALSE, col.names=FALSE)
+write.table(c(x,y,err_x,err_y), file="standart", row.names=FALSE, col.names=FALSE)
 write.table(format(miscl, digits=1, nsmall=4), file="misclosures", row.names=FALSE, col.names=FALSE, quote=FALSE)
