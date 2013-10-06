@@ -8,16 +8,20 @@ x 	<- 	m[1,1] * star[1,1] +
 		m[2,1] * star[1,2] + m[3,1]
 y 	<- 	m[4,1] * star[1,1] + 
 		m[5,1] * star[1,2] + m[6,1]
-err_x <-sqrt(
-	m[1,2]^2 * star[1,3]^2 +
-	m[2,2]^2 * star[1,4]^2 +
-	m[3,2]^2
-)
-err_y <- sqrt(
-	m[4,2]^2 * star[1,3]^2 +
-	m[5,2]^2 * star[1,4]^2 +
-	m[6,2]^2
-)
+		
+err_x <- star[1,3]
+#err_x <-sqrt(
+	#m[1,2]^2 * star[1,3]^2 +
+	#m[2,2]^2 * star[1,4]^2 +
+	#m[3,2]^2
+#)
+
+err_y <- star[1,4]
+#err_y <- sqrt(
+	#m[4,2]^2 * star[1,3]^2 +
+	#m[5,2]^2 * star[1,4]^2 +
+	#m[6,2]^2
+#)
 
 # calculating reference stars
 stars <- read.table("stars")
@@ -42,7 +46,7 @@ for (i in 1:num_stars) {
 }
 
 # misclosure O-C
-obs_stars_src <- readLines(paste0(star_path,"s"))
+obs_stars_src <- readLines("../20100101/stars")
 
 if (file.exists(ms_file))
 	missed_stars <- read.table(ms_file)
@@ -52,4 +56,4 @@ obs_stars <- read.table(textConnection(obs_stars_src[index]))
 miscl <- obs_stars[,1:2]-calc_stars[,1:2]
 
 write.table(c(x,y,err_x,err_y), file="standart", row.names=FALSE, col.names=FALSE)
-write.table(format(miscl, digits=1, nsmall=4), file="misclosures", row.names=FALSE, col.names=FALSE, quote=FALSE)
+write.table(format(miscl, digits=1, nsmall=4, scientific=FALSE), file="misclosures", row.names=FALSE, col.names=FALSE, quote=FALSE)
