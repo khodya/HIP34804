@@ -7,6 +7,7 @@ nights <- setdiff(nights, base_night)
 for (i in nights) {
 	setwd(paste0("src/",i))
 	source("../../scripts/mean.R")
+	source("../../scripts/_meanTargetStar.R")
 	source("../../scripts/ols.R")
 	source("../../scripts/correction.R")
 	setwd("../..")
