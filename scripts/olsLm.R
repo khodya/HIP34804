@@ -15,4 +15,7 @@ index <- setdiff(c(1:max_num_ref_stars),missed_stars)
 base_src <- readLines(base_plate_path)
 base_plate <- read.table(textConnection(base_src[index]))
 
-mf_x <- lm(base_plate[,1] ~ plate[,1] + plate[,2],weights=1/plate[,3])
+mf_ksi <- lm(base_plate[,1] ~ plate[,1] + plate[,2],weights=1/plate[,3])
+
+mf_eta <- lm(base_plate[,2]) ~ plate[,1] + plate[,2],weights=1/plate[,4])
+
