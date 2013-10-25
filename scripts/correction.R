@@ -28,4 +28,3 @@ err_y <- star[1,4]
 #)
 
 write.table(c(x,y,err_x,err_y), file="standart", row.names=FALSE, col.names=FALSE)
-write.table(format(miscl, digits=1, nsmall=4, scientific=FALSE), file="misclosures", row.names=FALSE, col.names=FALSE, quote=FALSE)
