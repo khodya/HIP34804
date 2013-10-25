@@ -1,0 +1,46 @@
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")
+?format
+format(13.7, nsmall = 3)
+miscl
+c <- read.table("g074a001.dat", header=FALSE)
+c
+c[,10]
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")
+miscl
+calc_stars
+obs_stars
+options(dd)
+options("dd")
+options
+str(options)
+obs_stars
+?read.table
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")
+miscl
+options(digits=1, nsmall=4)
+miscl
+options(digits=4, nsmall=4)
+miscl
+options(digits=3, nsmall=4)
+miscl
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")
+miscl
+miscl
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")
+miscl
+?option
+options(digits=4, nsmall=NULL)
+miscl
+options(digits=7, nsmall=NULL)
+miscl
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")
+?format
+?dput
+?dump
+help(format)
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/correction.R")

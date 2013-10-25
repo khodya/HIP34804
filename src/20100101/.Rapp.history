@@ -1,0 +1,9 @@
+library("corpcor")
+source("/Users/andrey/Code/HIP34804/HIP34804/scripts/mean.R")
+results
+coord <- read.table("coord.dat")
+coord
+coord[,10]
+coord[,9]
+coord[,10]
+coord[,11]
